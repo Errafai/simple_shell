@@ -1,11 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
-char *_command(const char *cmd);
-char * _getenv(char *env);
-
-extern char **environ;
+/*all used library*/
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <string.h>
@@ -16,8 +12,13 @@ extern char **environ;
 #include <sys/wait.h>
 #include <stddef.h>
 
-size_t _getline(char **line, size_t *n, int fd);
+/*envirmont variable*/
+extern char **environ;
 
+/*used functions*/
+char **spliter(char *command);
+char *get_path(const char *cmd);
 
+#define INUSED(X) (void)(X)
 #endif
 
