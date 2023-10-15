@@ -12,16 +12,17 @@ char **tokniser(char *line)
 
 	temp = strdup(line);
 
-	token = strtok(temp, " ");
+	token = strtok(temp, DELIME);
 	if (!token)
 	{
+		free(line), line = NULL;
 		free(temp), temp = NULL;
 		return (NULL);
 	}
 	while (token)
 	{
 		i++;
-		token = strtok(NULL, " ");
+		token = strtok(NULL, DELIME);
 	}
 	free(temp), temp = NULL;
 
@@ -31,23 +32,14 @@ char **tokniser(char *line)
 		free(line), line = NULL;
 		return (NULL);
 	}
-	token = strtok(line, " ");
+	token = strtok(line, DELIME);
 	while (token)
 	{
-		command[j] = token;
-		token = strtok(NULL, " ");
+		command[j] = strdup(token);
+		token = strtok(NULL, DELIME);
 		j++;
 	}
 	free(line), line = NULL;
 	command[j] = NULL;
 	return (command);
-}
-
-int main()
-{
-	char **line = tokniser("i am very good");
-	int i;
-
-	for (i = 0; line[i]; i++)
-		printf("%s\n", line[i]);
 }
