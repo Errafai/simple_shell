@@ -1,4 +1,11 @@
 #include "shell.h"
+/**
+ * _execute - execute the command of the user
+ * @command: the command
+ * @argv: the argument of the main
+ * @idx: the number of command executed
+ * Return: the execute status
+ */
 
 int _execute(char **command, char **argv, int idx)
 {

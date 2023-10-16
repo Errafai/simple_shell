@@ -1,5 +1,8 @@
 #include "shell.h"
-
+/**
+ * free_array - free the command array
+ * @array: the array of stings
+ */
 void free_array(char **array)
 {
 	int i;
@@ -10,7 +13,12 @@ void free_array(char **array)
 		free(array[i]), array[i] = NULL;
 	free(array), array = NULL;
 }
-
+/**
+ * printerror - print the error if the command dont exist
+ * @name: the name of command
+ * @cmd: the command
+ * @idx: the number of command
+ */
 void printerror(char *name, char *cmd, int idx)
 {
 	char mssg[] = ": not found\n";

@@ -1,5 +1,8 @@
 #include "shell.h"
-
+/**
+ * read_line - read the command of the user
+ * Return: the command line
+ */
 char *read_line(void)
 {
 	char *line = NULL;

@@ -1,5 +1,9 @@
 #include "shell.h"
-
+/**
+ * tokniser - split the command to array of strings
+ * @line: the line of command
+ * Return: array of strings
+ */
 char **tokniser(char *line)
 {
 	char *token;
