@@ -12,7 +12,7 @@ int built_in(char *command)
 	for (i = 0; builtin[i]; i++)
 	{
 		if (strcmp(command, builtin[i]) == 0)
-				return (1);
+			return (1);
 	}
 
 	return (0);
@@ -26,7 +26,7 @@ int built_in(char *command)
   * @idx: the number of command executed
   */
 
-void handle_builtin(char **command,char **argv, int *status, int idx)
+void handle_builtin(char **command, char **argv, int *status, int idx)
 {
 	(void) argv;
 	(void) idx;

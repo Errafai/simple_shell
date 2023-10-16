@@ -30,7 +30,7 @@ char **tokniser(char *line)
 	}
 	free(temp), temp = NULL;
 
-	command = malloc(sizeof(char*) * (i + 1));
+	command = malloc(sizeof(char *) * (i + 1));
 	if (command == NULL)
 	{
 		free(line), line = NULL;

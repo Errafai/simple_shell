@@ -11,7 +11,7 @@ char *read_line(void)
 
 	if (isatty(STDIN_FILENO))
 		write(1, "$ ", 2);
-	n = getline(&line , &len, stdin);
+	n = getline(&line, &len, stdin);
 	if (n == -1)
 	{
 		free(line), line = NULL;

@@ -26,7 +26,7 @@ int _execute(char **command, char **argv, int idx)
 	{
 		if (execve(full_path, command, environ) == -1)
 		{
-			free(full_path), full_path = NULL;
+			free(full_path),  full_path = NULL;
 			free_array(command);
 			exit(0);
 		}
