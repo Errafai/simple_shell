@@ -1,5 +1,10 @@
 #include "shell.h"
-
+/**
+ * main - the main progrmam that do all the work
+ * @ac: the number of argument
+ * @argv: the argument after the main
+ * Return: 0 always
+ */
 int main(int ac, char **argv)
 {
 	char *line = NULL;

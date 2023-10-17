@@ -1,5 +1,9 @@
 #include "shell.h"
-
+/**
+ * tokniser - split the command to array of strings
+ * @line: the line of command
+ * Return: array of strings
+ */
 char **tokniser(char *line)
 {
 	char *token;
@@ -26,7 +30,7 @@ char **tokniser(char *line)
 	}
 	free(temp), temp = NULL;
 
-	command = malloc(sizeof(char*) * (i + 1));
+	command = malloc(sizeof(char *) * (i + 1));
 	if (command == NULL)
 	{
 		free(line), line = NULL;

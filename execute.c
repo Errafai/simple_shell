@@ -1,4 +1,11 @@
 #include "shell.h"
+/**
+ * _execute - execute the command of the user
+ * @command: the command
+ * @argv: the argument of the main
+ * @idx: the number of command executed
+ * Return: the execute status
+ */
 
 int _execute(char **command, char **argv, int idx)
 {
@@ -19,7 +26,7 @@ int _execute(char **command, char **argv, int idx)
 	{
 		if (execve(full_path, command, environ) == -1)
 		{
-			free(full_path), full_path = NULL;
+			free(full_path),  full_path = NULL;
 			free_array(command);
 			exit(0);
 		}

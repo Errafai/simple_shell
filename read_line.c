@@ -1,5 +1,8 @@
 #include "shell.h"
-
+/**
+ * read_line - read the command of the user
+ * Return: the command line
+ */
 char *read_line(void)
 {
 	char *line = NULL;
@@ -8,7 +11,7 @@ char *read_line(void)
 
 	if (isatty(STDIN_FILENO))
 		write(1, "$ ", 2);
-	n = getline(&line , &len, stdin);
+	n = getline(&line, &len, stdin);
 	if (n == -1)
 	{
 		free(line), line = NULL;
