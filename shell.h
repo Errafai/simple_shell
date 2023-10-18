@@ -18,7 +18,7 @@ extern char **environ;
 
 /*******built in function*******/
 int built_in(char *command);
-void handle_builtin(char **command,char **argv, int *status, int idx);
+void handle_builtin(char **command, char **argv, int *status, int idx);
 void exit_shell(char **command, int *status);
 void print_env(char **command, int *status);
 
