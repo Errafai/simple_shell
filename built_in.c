@@ -54,11 +54,12 @@ void exit_shell(char **command, int *status)
 void print_env(char **command, int *status)
 {
 	int i;
-	(void) command;
+
 	for (i = 0; environ[i]; i++)
 	{
 		write(STDOUT_FILENO, environ[i], strlen(environ[i]));
 		write(STDOUT_FILENO, "\n", 1);
 	}
+	free_array(command), command = NULL;
 	*status = 0;
 }
